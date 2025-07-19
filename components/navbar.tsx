@@ -144,7 +144,11 @@ export default function Navbar() {
                 </Button>
               </SignInButton>
             </SignedOut>
-
+            <Link href="https://vip.acessorias.com/on4contabilidade">
+          <Button className="bg-[#B69067] text-white hover:bg-[#A58057] font-medium px-6 transition-transform duration-300 hover:scale-105">
+               Area do cliente
+              </Button>
+              </Link>
             <SignedIn>
               <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-[#4ade80] text-white hover:bg-[#3dc76a] font-medium w-full">Dashboard</Button>
