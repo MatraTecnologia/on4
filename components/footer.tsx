@@ -68,6 +68,27 @@ export default function Footer() {
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </Link>
+            <Link
+              href="https://www.instagram.com/on4contabilidade/"
+              className="bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-instagram"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" />
+                <path d="M16.5 7.5h.01" />
+                <circle cx="12" cy="12" r="5" />
+              </svg>
+            </Link>
           </div>
         </div>
 
