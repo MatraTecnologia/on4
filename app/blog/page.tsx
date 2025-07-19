@@ -85,55 +85,61 @@ export default async function BlogPage() {
           {/* All Posts Grid */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-[#1e3352] mb-6">Todos os Posts</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post) => (
-                <Card
-                  key={post.id}
-                  className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={post.image || "/placeholder.svg?height=300&width=400"}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className="bg-[#4ade80] text-white text-xs">{post.category}</Badge>
-                      <div className="flex items-center text-gray-500 text-xs">
-                        <Clock className="h-3 w-3 mr-1" />
-                        {post.read_time} min
+            {posts.length === 0 ? (
+              <div className="text-center text-gray-500 py-16 text-lg">
+                Nenhum post publicado ainda. Volte em breve para novidades!
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts.map((post) => (
+                  <Card
+                    key={post.id}
+                    className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  >
+                    <div className="relative h-48">
+                      <Image
+                        src={post.image || "/placeholder.svg?height=300&width=400"}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Badge className="bg-[#4ade80] text-white text-xs">{post.category}</Badge>
+                        <div className="flex items-center text-gray-500 text-xs">
+                          <Clock className="h-3 w-3 mr-1" />
+                          {post.read_time} min
+                        </div>
                       </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-[#1e3352] hover:text-[#4ade80] transition-colors line-clamp-2">
-                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                    </h3>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center">
-                        <User className="h-3 w-3 mr-1" />
-                        {post.author}
+                      <h3 className="text-lg font-bold text-[#1e3352] hover:text-[#4ade80] transition-colors line-clamp-2">
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                      </h3>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <div className="flex items-center">
+                          <User className="h-3 w-3 mr-1" />
+                          {post.author}
+                        </div>
+                        <span>
+                          {format(new Date(post.published_at || post.created_at), "dd/MM/yyyy", { locale: ptBR })}
+                        </span>
                       </div>
-                      <span>
-                        {format(new Date(post.published_at || post.created_at), "dd/MM/yyyy", { locale: ptBR })}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-1 mt-3">
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                      <div className="flex flex-wrap gap-1 mt-3">
+                        {post.tags.slice(0, 3).map((tag) => (
+                          <Badge key={tag} variant="outline" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Newsletter Signup */}
