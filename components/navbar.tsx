@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Menu } from "lucide-react"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
@@ -23,7 +23,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (section) {
       window.scrollTo({
@@ -110,6 +110,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-[#1e3352]/95 backdrop-blur-sm py-4 px-4 shadow-md">
+          <div className="flex justify-end mb-2">
+            <button onClick={() => setMobileMenuOpen(false)} aria-label="Fechar menu" className="text-white text-2xl p-2">
+              &times;
+            </button>
+          </div>
           <nav className="flex flex-col space-y-4">
             <button
               onClick={() => scrollToSection("sobre")}
@@ -144,11 +149,11 @@ export default function Navbar() {
                 </Button>
               </SignInButton>
             </SignedOut>
-            <Link href="https://vip.acessorias.com/on4contabilidade">
-          <Button className="bg-[#B69067] text-white hover:bg-[#A58057] font-medium px-6 transition-transform duration-300 hover:scale-105">
-               Area do cliente
+            <Link href="https://vip.acessorias.com/on4contabilidade" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="bg-[#B69067] text-white hover:bg-[#A58057] font-medium px-6 transition-transform duration-300 hover:scale-105">
+                Area do cliente
               </Button>
-              </Link>
+            </Link>
             <SignedIn>
               <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-[#4ade80] text-white hover:bg-[#3dc76a] font-medium w-full">Dashboard</Button>

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useState } from "react"
+import React, { useState } from "react"
 import { toast } from "sonner"
 import AnimatedElement from "./animated-element"
 import { createContact } from "@/lib/supabase"
@@ -19,16 +19,16 @@ export default function HeroSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSelectChange = (name, value) => {
+  const handleSelectChange = (name: string, value: string) => {
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
         </AnimatedElement>
 
         <AnimatedElement animation="slide-up" delay={0.3} duration={0.8} threshold={0.2}>
-          <div className="bg-white p-8 rounded-3xl shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
+          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-3xl shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] max-w-full">
             {submitted ? (
               <AnimatedElement animation="zoom-in">
                 <div className="py-16 text-center">
