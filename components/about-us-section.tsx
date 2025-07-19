@@ -59,7 +59,7 @@ export default function AboutUsSection() {
 
               <div className="pt-4">
                 <a
-                  href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
+                  href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +135,7 @@ export default function AboutUsSection() {
           <AnimatedElement animation="fade-up" delay={0.9}>
             <div className="flex justify-center mt-8">
               <a
-                href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
+                href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
                 target="_blank"
                 rel="noopener noreferrer"
               >

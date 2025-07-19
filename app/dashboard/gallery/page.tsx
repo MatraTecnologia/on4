@@ -302,7 +302,7 @@ export default function GalleryPage() {
             <div className="text-center py-12">
               <Upload className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhuma imagem encontrada</h3>
-              <p className="text-gray-500 mb-4">Faça upload de suas primeiras imagens para começar</p>
+              <p className="text-gray-500 mb-4">upload de suas primeiras imagens para começar</p>
               <Button asChild className="bg-[#4ade80] hover:bg-[#3dc76a]">
                 <label htmlFor="upload-input" className="cursor-pointer">
                   <Plus className="h-4 w-4 mr-2" />

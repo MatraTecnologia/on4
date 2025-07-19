@@ -25,7 +25,7 @@ export default function SaibaMaisPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
+                  href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -319,7 +319,7 @@ export default function SaibaMaisPage() {
                 </div>
                 <div className="mt-6">
                   <a
-                    href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
+                    href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -345,7 +345,7 @@ export default function SaibaMaisPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
+                href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20falar%20com%20atendente"
                 target="_blank"
                 rel="noopener noreferrer"
               >

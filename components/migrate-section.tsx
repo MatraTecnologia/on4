@@ -113,7 +113,7 @@ export default function MigrateSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/5543988466580?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20migrar%20minha%20contabilidade"
+                  href="https://wa.me/554333240380?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%0AQuero%20migrar%20minha%20contabilidade"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
